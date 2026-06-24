@@ -2,6 +2,10 @@
 
 A ROS 2 manipulation and motion-planning stack built using **ROS 2 Jazzy**, **MoveIt 2**, **Gazebo Sim**, and **OMPL Motion Planning**.
 
+
+https://github.com/user-attachments/assets/15c3b7f4-cdee-4130-a43f-f1095333c729
+
+
 ---
 
 ## Features
