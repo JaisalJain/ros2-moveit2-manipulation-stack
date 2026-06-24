@@ -55,31 +55,7 @@ source install/setup.bash
 ```
 
 ---
-
-# 1. Gazebo Simulation
-
-Launch the Panda robot inside Gazebo Sim.
-
-```bash
-source install/setup.bash
-
-ros2 launch panda_description panda_gazebo.launch.py
-```
-
-### Features
-
-- Physics simulation
-- ros2_control integration
-- Joint trajectory controllers
-- Simulated robot hardware interface
-
-### Result
-
-![Gazebo Panda](docs/images/gazebo_panda.png)
-
----
-
-# 2. Robot Model and Motion Planning in RViz
+# 1. Robot Model and Motion Planning in RViz
 
 Launch the Panda manipulator with MoveIt 2.
 
@@ -106,6 +82,31 @@ rviz2
 ### Result
 
 ![MoveIt RViz](docs/images/moveit_rviz.png)
+
+
+---
+
+# 2. Gazebo Simulation
+
+Launch the Panda robot inside Gazebo Sim.
+
+```bash
+source install/setup.bash
+
+ros2 launch panda_description panda_gazebo.launch.py
+```
+
+### Features
+
+- Physics simulation
+- ros2_control integration
+- Joint trajectory controllers
+- Simulated robot hardware interface
+
+### Result
+
+![Gazebo Panda](docs/images/gazebo_panda.png)
+
 
 ---
 
@@ -140,8 +141,7 @@ The depth camera publishes:
 ```text
 /depth_camera/points
 ```
-
-MoveIt consumes the point cloud stream and builds an occupancy representation of the environment.
+MoveIt consumes the depth-camera point cloud stream and generates a voxelized occupancy representation used for collision-aware planning
 
 ### Features
 
@@ -265,7 +265,7 @@ ros2 launch panda_moveit_control planning_with_obstacles.launch.py
 - MoveIt 2
 - Gazebo Sim
 - RViz2
-- OMPL
+- Open Motion Planning Library (OMPL)
 - OctoMap
 - ros2_control
 - JointTrajectoryController
